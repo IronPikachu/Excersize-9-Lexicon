@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <title>Bish-Bosh</title>
+</head>
+
+<body>
+    <header>
+        <h1>Bish-Bosh 2.0</h1>
+    </header>
+    <hr/>
+    <div>
+        <div id="explanation">
+            <p>
+                Bish-Bosh är en nummerlek där varje tal jämt delbart med <span class="var">a</span> skrivs ut som <span class="bibo">Bish</span>
+                och varje tal jämt delbart med <span class="var">b</span> skrivs ut som <span class="bibo">Bosh</span>. Ifall både <span class="var">a</span>
+                och <span class="var">b</span> delar talet så skrivs <span class="bibo">BishBosh</span> ut.
+            </p>
+            <p>
+                Detta är skapat i utbildningssyfte.
+            </p>
+        </div>
+        <div id="inputdiv">
+            <form>
+                <label>Bish</label>
+                <input type="number" id="bish"/>
+                <label>Bosh</label>
+                <input type="number" id="bosh"/>
+                <label>Max</label>
+                <input type="number" id="max"/>
+            </form>
+            <button onclick="bishbosh()">SUBMIT</button>
+        </div>
+        <div id="numbers">
+            <p>
+                numbers go here
+            </p>
+        </div>
+    </div>
+    <hr/>
+    <footer>
+        <p>Simon &copy;</p>
+    </footer>
+    <script src="bishbosh.js"></script>
+</body>
+
+</html>
