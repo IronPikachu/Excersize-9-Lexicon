@@ -40,3 +40,5 @@ function invalid(number){
     }
     return false;
 }
+
+document.getElementById('btn').onclick = bishbosh;
