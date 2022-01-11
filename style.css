@@ -1,3 +1,41 @@
 body{
     background-color: lightgray;
+    text-align: center;
+    margin: 0;
+}
+
+.var {
+    font-style: italic;
+}
+
+.bibo {
+    font-weight: bold;
+}
+
+header{
+    background-color: white;
+    border-bottom: solid 1px black;
+    padding-top: 0.5rem;
+}
+
+footer {
+    background-color: gray;
+    border-top: solid 1px black;
+    padding-bottom: 0.5rem;
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#numbers {
+    border: solid 1px darkgray;
+}
+
+div{
+    margin: 1rem;
+    padding: 1rem;
+}
+
+button {
+    margin: 1rem;
 }

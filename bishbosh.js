@@ -1,33 +1,37 @@
 function bishbosh(){
-    bish = document.getElementById("bish");
-    bosh = document.getElementById("bosh");
-    max = document.getElementById("max");
+    bish = parseInt(document.getElementById('bish').value);
+    bosh = parseInt(document.getElementById('bosh').value);
+    max = parseInt(document.getElementById('max').value);
+
+    numberdisplay = document.getElementById('numbers').innerHTML;
 
     if(invalid(bish) || invalid(bosh) || invalid(max)){
-        document.getElementById("numbers").innerHTML = "<p>bad format</p>";
+        numberdisplay = '<p>bad format</p>';
+        document.getElementById('numbers').innerHTML = numberdisplay;
         return;
     }
 
-    newHtml = "<p>";
+    numberdisplay = '<p>';
 
     for(i = 1; i <= max; i++){
         if(i % bish == 0 && i % bosh == 0){
-            newHtml += "BishBosh ";
+            numberdisplay += 'BishBosh ';
+            console.log('bishbosh');
         }
         else if (i % bish == 0){
-            newHtml += "Bish ";
+            numberdisplay += 'Bish ';
         }
         else if (i % bosh == 0){
-            newHtml += "Bish ";
+            numberdisplay += 'Bish ';
         }
         else{
-            newHtml += i + " ";
+            numberdisplay += i + ' ';
         }
     }
 
-    newHtml += "</p>";
+    numberdisplay += '</p>';
 
-    document.getElementById("numbers").innerHTML = newHtml;
+    document.getElementById('numbers').innerHTML = numberdisplay;
 }
 
 function invalid(number){
