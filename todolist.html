@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/todo.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/todo.css" />
 </head>
-<body>
-    <header>
 
-    </header>
-    <div>
-
+<body class="bg-dark">
+    <nav class="sticky-top border-bottom navbar-dark text-center">
+        <div class="container-fluid bg-gradient pt-1 pb-1">
+            <header>
+                <h1 class="">ToDo list</h1>
+            </header>
+        </div>
+    </nav>
+    <div class="container-fluid mt-1 pt-2 mb-1 pb-2">
+        <div class="row">
+            <div class="col form-check form-check-inline">
+                <form class="form-check-inline">
+                    <label class="form-check-label">Item to add: </label>
+                    <input class="form-control form-control-lg" type="text" id="item" placeholder="item to add"/>
+                </form>
+            </div>
+            <div class="col-3">
+                <button class="w-100 h-100" id="addItem">Add item</button>
+            </div>
+        </div>
     </div>
-    <footer>
-
-    </footer>
+    <div class="container-fluid mt-1 pt-2 mb-1 pb-2">
+        <div class="row">
+            <div class="col">
+                <h2>ToDo</h2>
+                <ul id="itemList">
+                </ul>
+            </div>
+            <div class="col-3">
+                <button class="w-100 h-100" id="undo">Undo</button>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-bottom border-top">
+        <footer>
+            <p class="text-center text-muted">Squawk&copy;</p>
+        </footer>
+    </div>
     <script src="js/todo.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

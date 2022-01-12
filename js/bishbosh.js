@@ -1,12 +1,12 @@
 function bishbosh(){
-    bish = parseInt(document.getElementById('bish').value);
-    bosh = parseInt(document.getElementById('bosh').value);
-    max = parseInt(document.getElementById('max').value);
+    let bish = parseInt(document.getElementById('bish').value);
+    let bosh = parseInt(document.getElementById('bosh').value);
+    let max = parseInt(document.getElementById('max').value);
 
-    numberdisplay = document.getElementById('numbers').innerHTML;
+    let numberdisplay = document.getElementById('numbers').innerHTML;
 
     if(invalid(bish) || invalid(bosh) || invalid(max)){
-        numberdisplay = '<p>bad format</p>';
+        let numberdisplay = '<p>bad format</p>';
         document.getElementById('numbers').innerHTML = numberdisplay;
         return;
     }
