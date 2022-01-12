@@ -10,44 +10,49 @@
     <link rel="stylesheet" href="css/todo.css" />
 </head>
 
-<body class="bg-dark">
-    <nav class="sticky-top border-bottom navbar-dark text-center">
-        <div class="container-fluid bg-gradient pt-1 pb-1">
+<body>
+    <!--nav class="sticky-top navbar navbar-primary bg-primary bg-gradient text-center">
+        <div class="container-fluid pt-1 pb-1">
             <header>
-                <h1 class="">ToDo list</h1>
+                <h1 class="navbar-brand mb-0 h1">ToDo list</h1>
             </header>
         </div>
-    </nav>
-    <div class="container-fluid mt-1 pt-2 mb-1 pb-2">
-        <div class="row">
+    </nav-->
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom border-primary border-1">
+        <a class="d-flex align-items-center mb-3 mb-md-0 text-decoration-none">
+            <span class="fs-4">
+                ToDo list
+            </span>
+        </a>
+    </header>
+    <div class="container-fluid py-5 my-2">
+        <div class="row gy-4">
             <div class="col form-check form-check-inline">
-                <form class="form-check-inline">
+                <form class="form-check">
                     <label class="form-check-label">Item to add: </label>
-                    <input class="form-control form-control-lg" type="text" id="item" placeholder="item to add"/>
+                    <input class="form-control form-control-lg" type="text" id="item" placeholder="item to add" />
                 </form>
             </div>
             <div class="col-3">
-                <button class="w-100 h-100" id="addItem">Add item</button>
+                <button class="w-100 h-100 btn btn-primary btn-outline-info" id="addItem">Add item</button>
             </div>
         </div>
     </div>
-    <div class="container-fluid mt-1 pt-2 mb-1 pb-2">
-        <div class="row">
+    <div class="container-fluid py-5 my-2">
+        <div class="row gy-4">
             <div class="col">
-                <h2>ToDo</h2>
-                <ul id="itemList">
+                <h2 class="">ToDo</h2>
+                <ul class="list-group" id="itemList">
                 </ul>
             </div>
             <div class="col-3">
-                <button class="w-100 h-100" id="undo">Undo</button>
+                <button class="w-100 h-100 btn btn-warning btn-outline-warning text-dark text-decoration-underline" id="undo">Undo</button>
             </div>
         </div>
     </div>
-    <div class="fixed-bottom border-top">
-        <footer>
-            <p class="text-center text-muted">Squawk&copy;</p>
-        </footer>
-    </div>
+    <footer class="text-center border-top border-1 border-primary">
+        <p class="text-muted pt-3">Squawk&copy;</p>
+    </footer>
     <script src="js/todo.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>

@@ -1,4 +1,12 @@
 .finito{
     text-decoration: line-through;
-    background: darkorchid;
+    text-shadow: 
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    0px 2px 0 red,
+    0px -2px 0 red,
+    2px 0px 0 blue,
+    -2px 0px 0 blue;
 }
