@@ -1,5 +1,7 @@
-var li_item_index = 0;
-var latest_item_id = [];
+var is_NaN = localStorage.getItem('li_item_index');
+var li_item_index = (is_NaN == NaN ? 0 : is_NaN);
+var is_empty = JSON.parse(localStorage.getItem('latest_item_id'));
+var latest_item_id = (is_empty ? is_empty : []);
 
 function addItem(){
     let item = document.getElementById('item').value;
@@ -29,8 +31,7 @@ function addItem(){
         list.appendChild(newitem);
     }
 
-    let meme = 'ba' + parseInt('a') + 'a';
-    console.log(meme.toLowerCase());
+    console.log(('ba' + parseInt('a')).toLowerCase());
 }
 
 function undo(){
@@ -45,10 +46,13 @@ function undo(){
 }
 
 function finish(itemid){
-    document.getElementById(itemid).classList.add('active');
-    document.getElementById(itemid).classList.add('finito');
-
-    latest_item_id.push(itemid);
+    let item = document.getElementById(itemid);
+    if(item){
+        item.classList.add('active');
+        item.classList.add('finito');
+        
+        latest_item_id.push(itemid);
+    }
 }
 
 function removeitem(itemid){
@@ -66,3 +70,27 @@ function removeitem(itemid){
 
 document.getElementById('addItem').onclick = addItem;
 document.getElementById('undo').onclick = undo;
+
+window.onload = function(){
+    if(true){
+        document.getElementById('itemList').innerHTML = localStorage.getItem('itemList');
+        let listOfIds = document.querySelectorAll('[id^="li_number_"]');
+        listOfIds.forEach(idElement => {
+            idElement.addEventListener('click', function(){
+                finish(idElement.id);
+            });
+            idElement.getElementsByTagName('button')[0].addEventListener('click', function(){
+                removeitem(idElement.id);
+            });
+        });
+    }
+    else{
+        console.log('Activate onload!')
+    }
+}
+
+window.onbeforeunload = function(){
+    localStorage.setItem('itemList', document.getElementById('itemList').innerHTML);
+    localStorage.setItem('li_item_index', li_item_index);
+    localStorage.setItem('latest_item_id', JSON.stringify(latest_item_id));
+}
