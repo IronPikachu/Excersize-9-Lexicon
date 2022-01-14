@@ -10,3 +10,7 @@
     2px 0px 0 blue,
     -2px 0px 0 blue;
 }
+
+.btn-danger {
+    float: right;
+}
